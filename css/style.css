@@ -72,3 +72,12 @@ main{
   border-bottom: 1px solid rgb(165, 155, 155);
 }
 
+.loading-box{
+  padding: 25px;
+}
+
+.loading-box video{
+  width: 200px;
+  height: 200px;
+}
+

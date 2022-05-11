@@ -13,11 +13,21 @@
 <body>
   
 <div id="app">
+  
   <main class="d-flex">
-    <div class="container d-flex">
+    <!-- container -->
+    <div v-if="isLoading" class="loading-box d-flex debug">
+      <img src="https://c.tenor.com/n4w0VzWFbtgAAAAC/loading.gif" alt="Loading">
+    </div>
+    <div 
+    v-else
+    class="container d-flex">
+
       <h1>Lista dipendenti & e-mail</h1>
+
       <div class="col-container d-flex">
-        <!-- col left -->
+
+        
         <div class="col left">
           <h3>E mail list</h3>
           <div 
@@ -27,8 +37,9 @@
           </div>
         </div>
 
-        <!-- col right -->
+        
         <div class="col right"></div>
+
       </div>
       
     </div>

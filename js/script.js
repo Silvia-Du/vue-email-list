@@ -11,6 +11,7 @@ const app = new Vue({
   el : '#app',
 
   data:{
+    isLoading : true, 
     eMail : '',
     numNewMail: 10,
     eMailList : [],
@@ -26,6 +27,7 @@ const app = new Vue({
         .then(response =>  {
         this.eMail = response.data.response;
         this.eMailList.push(this.eMail);
+        this.isLoading = false;
         })
 
       }
