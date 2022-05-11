@@ -64,6 +64,9 @@ main{
 
 .col.right{
   width: 60%;
+  padding: 20px;
+  flex-direction: column;
+  text-align: center;
 }
 
 .col-container .col.left .row{
@@ -72,12 +75,28 @@ main{
   border-bottom: 1px solid rgb(165, 155, 155);
 }
 
+.col.left .row:hover{
+  background-color: rgb(181, 188, 194);
+}
+
 .loading-box{
   padding: 25px;
 }
 
-.loading-box video{
+/* Col Right */
+
+.col.right .team-member{
+  background-color: rgba(165, 42, 42, 0.505);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.col.right .team-member img{
   width: 200px;
-  height: 200px;
+  margin-bottom: 50px;
+}
+
+.col.right .team-member h3{
+  margin: 15px;
 }
 

@@ -31,14 +31,21 @@
         <div class="col left">
           <h3>E mail list</h3>
           <div 
-          v-for="email in eMailList"
+          v-for="(email, index) in eMailList"
+          @click=""
           class="row">
             <p>{{email}}</p>
           </div>
         </div>
 
         
-        <div class="col right"></div>
+        <div class="col right d-flex">
+          <div class="team-member">
+            <img src="./img-dipendenti/1.png" alt="">
+            <h3>Nome</h3>
+            <h3>Email</h3>
+          </div>
+        </div>
 
       </div>
       

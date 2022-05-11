@@ -11,6 +11,61 @@ const app = new Vue({
   el : '#app',
 
   data:{
+
+    teamMember: [
+      {
+        name: 'Luisa',
+        image: '1',
+        email: '',
+      },
+      {
+        name: 'Marta',
+        image: '2',
+        email: '',
+      },
+      {
+        name: 'Andrea',
+        image: '3',
+        email: '',
+      },
+      {
+        name: 'Marco',
+        image: '4',
+        email: '',
+      },
+      {
+        name: 'Tim',
+        image: '5',
+        email: '',
+      },
+      {
+        name: 'Lara',
+        image: '6',
+        email: '',
+      },
+      {
+        name: 'Jennefer',
+        image: '7',
+        email: '',
+      },
+      {
+        name: 'Stefano',
+        image: '8',
+        email: '',
+      },
+      {
+        name: 'Luisa B',
+        image: '9',
+        email: '',
+      },
+      {
+        name: 'Marco',
+        image: '10',
+        email: '',
+      }
+    ],
+
+    SelectedMember: 0,
     isLoading : true, 
     eMail : '',
     numNewMail: 10,
@@ -28,12 +83,12 @@ const app = new Vue({
         this.eMail = response.data.response;
         this.eMailList.push(this.eMail);
         this.isLoading = false;
+        
         })
-
       }
+    },
 
 
-    }
   },
 
 
