@@ -33,6 +33,7 @@ main{
   max-width: 1800px;
   border-radius: 20px;
   flex-direction: column;
+  color: white;
   background-color: rgb(86, 86, 130);
   box-shadow: 10px 10px 20px rgb(48, 22, 72);
 }
@@ -59,6 +60,7 @@ main{
 
 .col.left h3{
   padding-bottom: 20px;
+  color: rgb(63, 58, 58);
   border-bottom: 1px solid rgb(165, 155, 155);
 }
 
@@ -72,6 +74,7 @@ main{
 .col-container .col.left .row{
   width: 100%;
   padding: 20px;
+  color: rgb(63, 58, 58);
   border-bottom: 1px solid rgb(165, 155, 155);
 }
 
