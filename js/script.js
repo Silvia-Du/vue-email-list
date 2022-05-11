@@ -67,6 +67,7 @@ const app = new Vue({
 
     SelectedMember: 0,
     isLoading : true, 
+    error : false,
     eMail : '',
     numNewMail: 10,
     eMailList : [],
@@ -82,10 +83,22 @@ const app = new Vue({
         .then(response =>  {
         this.eMail = response.data.response;
         this.eMailList.push(this.eMail);
-        this.isLoading = false;
-        
+
+        if(this.eMailList.length === this.numNewMail){
+
+          setTimeout(()=>{
+            this.isLoading = false;
+          }, 2000 )
+          
+        }
+
         })
+
+
+
+        
       }
+      
     },
 
 
