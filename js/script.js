@@ -12,14 +12,33 @@ const app = new Vue({
 
   data:{
     mex: 'ciao',
+    newMailNumber: 10,
+    eMailList : [],
+  },
+
+  methods:{
+
+    getEMailList(){
+
+      for(let i = 0; i< this.newMailNumber; i++){
+
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then(response =>  {
+        console.log(response.data.response);
+        })
+
+        
+      }
+
+
+    }
   },
 
 
 
   mounted(){
-    axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-    .then(response =>  {
-      console.log(response);
-    })
+    
+
+    this.getEMailList()
   }
 })
