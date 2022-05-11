@@ -11,8 +11,8 @@ const app = new Vue({
   el : '#app',
 
   data:{
-    mex: 'ciao',
-    newMailNumber: 10,
+    eMail : '',
+    numNewMail: 10,
     eMailList : [],
   },
 
@@ -20,14 +20,14 @@ const app = new Vue({
 
     getEMailList(){
 
-      for(let i = 0; i< this.newMailNumber; i++){
+      for(let i = 0; i< this.numNewMail; i++){
 
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
         .then(response =>  {
-        console.log(response.data.response);
+        this.eMail = response.data.response;
+        this.eMailList.push(this.eMail);
         })
 
-        
       }
 
 

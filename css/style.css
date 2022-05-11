@@ -58,7 +58,8 @@ main{
 }
 
 .col.left h3{
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(165, 155, 155);
 }
 
 .col.right{
@@ -67,7 +68,7 @@ main{
 
 .col-container .col.left .row{
   width: 100%;
-  height: 70px;
-  border: 1px solid rgb(165, 155, 155);
+  padding: 20px;
+  border-bottom: 1px solid rgb(165, 155, 155);
 }
 

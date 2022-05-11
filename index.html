@@ -19,8 +19,12 @@
       <div class="col-container d-flex">
         <!-- col left -->
         <div class="col left">
-          <h3>E-mail list</h3>
-          <div class="row"></div>
+          <h3>E mail list</h3>
+          <div 
+          v-for="email in eMailList"
+          class="row">
+            <p>{{email}}</p>
+          </div>
         </div>
 
         <!-- col right -->
