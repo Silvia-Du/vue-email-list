@@ -12,7 +12,7 @@ const app = new Vue({
 
   data:{
 
-    teamMember: [
+    teamList: [
       {
         name: 'Luisa',
         image: '1',
@@ -39,12 +39,12 @@ const app = new Vue({
         email: '',
       },
       {
-        name: 'Lara',
+        name: 'Leila',
         image: '6',
         email: '',
       },
       {
-        name: 'Jennefer',
+        name: 'Luca',
         image: '7',
         email: '',
       },
@@ -59,14 +59,14 @@ const app = new Vue({
         email: '',
       },
       {
-        name: 'Marco',
+        name: 'Sara',
         image: '10',
         email: '',
       }
     ],
 
     eMailList : [],
-    SelectedMember: 0,
+    Selectedindex: 0,
     numNewMail: 10,
     isLoading : true, 
     isError : false,
@@ -100,6 +100,17 @@ const app = new Vue({
       }
       
     },
+
+    getActiveMember(index){
+      this.Selectedindex = index;
+      
+    },
+
+    getMailToUser(index){
+      console.log(index, 'mail index');
+      console.log(this.eMailList[index], 'email dell index');
+      this.teamList[this.Selectedindex].email = this.eMailList[index];
+    }
 
 
   },

@@ -27,24 +27,38 @@
       v-else
       class="container d-flex">
   
-        <h1>Lista dipendenti & e-mail</h1>
+        <h1>Mail aziendali per i tuoi dipendenti</h1>
         <div class="col-container d-flex">
- 
+          <!-- col-left -->
           <div class="col left">
             <h3>E mail list</h3>
             <div 
             v-for="(email, index) in eMailList"
-            
+            @click="getMailToUser(index)"
             class="row">
               <p>{{email}}</p>
             </div>
           </div>
+          <!-- col-right -->
+          <div class="col right">
 
-          <div class="col right d-flex">
-            <div class="team-member">
-              <img src="./img/1.png" alt="">
-              <h3>Nome</h3>
-              <h3>Email</h3>
+            <div class="team-member d-flex">
+              <img :src="`./img/${teamList[Selectedindex].image}.png`" :alt="teamList[Selectedindex].name">
+              <h3>{{teamList[Selectedindex].name}}</h3>
+              <h3 v-if="teamList[Selectedindex].email === ''">
+                Assegna una mail a questo dipendente
+              </h3>
+              <h3
+              v-else
+              >{{teamList[Selectedindex].email}}</h3>
+            </div>
+            <div class="team-list">
+              <div 
+              @click="getActiveMember(index)"
+              v-for="(member, index) in teamList"
+              class="box d-flex">
+                <img :src="`./img/${member.image}.png`" :alt="member.name">
+              </div>
             </div>
           </div>
   
