@@ -1,3 +1,5 @@
+
+/* UTILS */
 *{
   margin: 0;
   padding: 0;
@@ -14,6 +16,8 @@
   align-items: center;
   justify-content: center;
 }
+
+/* GENERAL */
 
 main{
   height: 100vh;
@@ -38,6 +42,18 @@ main{
   box-shadow: 10px 10px 20px rgb(48, 22, 72);
 }
 
+.error-box{
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  background-color: rgba(137, 43, 226, 0.281);
+}
+
+.error-box img{
+  max-width: 250px;
+}
+
 .col-container{
   margin-top: 10px;
   height: 80%;
@@ -49,6 +65,8 @@ main{
   background-color: rgb(235, 231, 231);
   border-radius: 15px;
 }
+
+/* COL LEFT */
 
 .col.left{
   width: 40%;
@@ -86,7 +104,7 @@ main{
   padding: 25px;
 }
 
-/* Col Right */
+/* COL RIGHT */
 
 .col.right .team-member{
   background-color: rgba(165, 42, 42, 0.505);

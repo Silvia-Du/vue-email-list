@@ -15,41 +15,50 @@
 <div id="app">
   
   <main class="d-flex">
-    <!-- container -->
-    <div v-if="isLoading" class="loading-box d-flex debug">
-      <img src="https://c.tenor.com/n4w0VzWFbtgAAAAC/loading.gif" alt="Loading">
-    </div>
+    <!-- v-if error -->
+    <div v-if="!isError">
 
-    <div 
-    v-else
-    class="container d-flex">
-
-      <h1>Lista dipendenti & e-mail</h1>
-
-      <div class="col-container d-flex">
-
-        
-        <div class="col left">
-          <h3>E mail list</h3>
-          <div 
-          v-for="email in eMailList"
-          @click=""
-          class="row">
-            <p>{{email}}</p>
-          </div>
-        </div>
-
-        
-        <div class="col right d-flex">
-          <div class="team-member">
-            <img src="./img-dipendenti/1.png" alt="">
-            <h3>Nome</h3>
-            <h3>Email</h3>
-          </div>
-        </div>
-
+      <div v-if="isLoading" class="loading-box d-flex debug">
+        <img src="https://c.tenor.com/n4w0VzWFbtgAAAAC/loading.gif" alt="Loading">
       </div>
-      
+
+      <!-- container (else)-->
+      <div 
+      v-else
+      class="container d-flex">
+  
+        <h1>Lista dipendenti & e-mail</h1>
+        <div class="col-container d-flex">
+ 
+          <div class="col left">
+            <h3>E mail list</h3>
+            <div 
+            v-for="(email, index) in eMailList"
+            
+            class="row">
+              <p>{{email}}</p>
+            </div>
+          </div>
+
+          <div class="col right d-flex">
+            <div class="team-member">
+              <img src="./img/1.png" alt="">
+              <h3>Nome</h3>
+              <h3>Email</h3>
+            </div>
+          </div>
+  
+        </div>
+        
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /v-if error & init v-else -->
+    <div v-else>
+      <div class="error-box">
+        <h1>{{errorMsg}}</h1>
+        <img src="./img/error-img.png" alt="error-img">
+      </div>
     </div>
   </main>
 
