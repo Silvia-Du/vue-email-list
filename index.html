@@ -50,7 +50,8 @@
               <img :src="`./img/${teamList[Selectedindex].image}.png`" :alt="teamList[Selectedindex].name">
               <h3>{{teamList[Selectedindex].name}}</h3>
 
-              <h3 v-if="teamList[Selectedindex].email === ''">
+              <h3 v-if="teamList[Selectedindex].email === ''"
+              class="allert">
                 Assegna una mail a questo dipendente
               </h3>
               <h3 v-else class="emply-mail-text">
