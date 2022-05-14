@@ -33,11 +33,15 @@
           <div class="col left">
             <h3>E mail list</h3>
             <div 
+            v-if="!assignedMail.includes(index)"
             v-for="(email, index) in eMailList"
             @click="getMailToUser(index)"
             class="row">
               <p>{{email}}</p>
             </div>
+            <h3 v-show="assignedMail.length === eMailList.length">
+              Non hai più e mail da assegnare!
+            </h3>
           </div>
           <!-- col-right -->
           <div class="col right">
@@ -45,12 +49,13 @@
             <div class="team-member d-flex">
               <img :src="`./img/${teamList[Selectedindex].image}.png`" :alt="teamList[Selectedindex].name">
               <h3>{{teamList[Selectedindex].name}}</h3>
+
               <h3 v-if="teamList[Selectedindex].email === ''">
                 Assegna una mail a questo dipendente
               </h3>
-              <h3
-              v-else
-              >{{teamList[Selectedindex].email}}</h3>
+              <h3 v-else class="emply-mail-text">
+                {{teamList[Selectedindex].email}}
+              </h3>
             </div>
             <div class="team-list">
               <div 

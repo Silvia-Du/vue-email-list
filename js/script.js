@@ -66,6 +66,7 @@ const app = new Vue({
     ],
 
     eMailList : [],
+    assignedMail: [],
     Selectedindex: 0,
     numNewMail: 10,
     isLoading : true, 
@@ -107,12 +108,12 @@ const app = new Vue({
     },
 
     getMailToUser(index){
-      console.log(index, 'mail index');
-      console.log(this.eMailList[index], 'email dell index');
-      this.teamList[this.Selectedindex].email = this.eMailList[index];
+      
+      if(this.teamList[this.Selectedindex].email === ''){
+        this.teamList[this.Selectedindex].email = this.eMailList[index];
+        this.assignedMail.push(index);
+      }
     }
-
-
   },
 
 
